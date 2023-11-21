@@ -13,7 +13,7 @@ module t;
     initial begin
         int rand_result;
         obj = new;
-        rand_result = obj.randomize();
+        rand_result = obj.randomize() with {c >42;} ;
         label: assert (obj.a inside {ONE, THREE});
             else $error("Assertion label failed!");
         assert(obj.b >8 && obj.b <42);
