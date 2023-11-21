@@ -1,7 +1,6 @@
 class first;
   
-  rand int data;
-  
-  constraint data_c {data < 10; data > 0;}
- 
+  constraint data_c_f { data_f > 0; data_f < 10;}
+  rand int data_f;
+   
 endclass

@@ -1,6 +1,6 @@
 
-`include  "./semaphore/first.sv"
-`include  "./semaphore/second.sv"
+//`include  "./semaphore/first.sv"
+//`include  "./semaphore/second.sv"
 `include  "./semaphore/main.sv"
 
 `timescale 1ns/1ps

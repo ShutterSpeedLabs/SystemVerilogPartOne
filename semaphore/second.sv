@@ -1,7 +1,6 @@
 class second;
-  
-  rand int data;
-  
-  constraint data_c {data > 10; data < 20;}
+
+  constraint data_c_s {data_s > 10; data_s < 20;}
+  rand int data_s;
   
 endclass

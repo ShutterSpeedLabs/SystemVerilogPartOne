@@ -1,3 +1,6 @@
+`include "semaphore/first.sv"
+`include "semaphore/second.sv"
+
 class main;
   
   semaphore sem;
@@ -5,7 +8,7 @@ class main;
   first f;
   second s;
   
-   int data;
+   int data1, data2;
    int i = 0;
   
   
@@ -15,8 +18,8 @@ class main;
     
     for(i = 0; i<10; i++) begin
       status_1 = f.randomize();
-      data = f.data;
-      $display("First access Semaphore and Data sent : %0d", f.data);
+      data1 = f.data_f;
+      $display("First access Semaphore and Data sent : %0d", f.data_f);
       #10;
     end 
     
@@ -33,8 +36,8 @@ class main;
     
     for(i = 0; i<10; i++) begin   
       status_2 = s.randomize();
-      data = s.data;
-      $display("Second access Semaphore and Data sent : %0d", s.data);
+      data2 = s.data_s;
+      $display("Second access Semaphore and Data sent : %0d", s.data_s);
       #10;
     end  
     

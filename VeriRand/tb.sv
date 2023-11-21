@@ -1,4 +1,11 @@
-`include "./VeriRand/generator.sv"
+//`include "./VeriRand/generator.sv"
+
+class generator;
+  
+  rand bit [3:0] a, b; ////////////rand or randc 
+  
+endclass
+
 module tb;
   generator g;
   int i = 0;

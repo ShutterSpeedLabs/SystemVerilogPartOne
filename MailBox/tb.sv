@@ -17,5 +17,10 @@ module tb;
     gen.run();
     drv.run();
   end
+
+  initial begin 
+    #200;
+    $finish();
+  end
     
 endmodule

@@ -5,7 +5,7 @@ class generator;
   
   mailbox #(transaction)  mbx;
   
-  logic [7:0] temp = 3;
+ 
   
   function new(mailbox #(transaction) mbx1);
     this.mbx = mbx1;
@@ -15,7 +15,7 @@ class generator;
   task run();
     t = new();
     t.data = 45;
-    mbx.put(temp);
+    mbx.put(t);
     $display("[GEN] : Data Send from Gen : %0d ",t.data);
   endtask
   
